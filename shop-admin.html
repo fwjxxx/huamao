@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>华猫</title>
+    <link rel="stylesheet" href="css/reset-0e27f0c88f.css">
+    <link rel="stylesheet" href="css/index-2fb511ea32.css">
+    <script src="static/require.js" data-main="js/main-a9eb934d43.js"></script>
+  </head>
+  <body>
+    <!-- 头部开始 -->
+    <div class="hm-admin-top">
+      <!-- logo -->
+      <div class="hm-logo">
+        <div class="logo">
+          <img src="img/logo-54b834f940.png" alt="">
+        </div>
+        <div class="logo-text">
+          <span>华猫V1.0</span>
+        </div>
+      </div>
+      <div class="hm-info-top">
+        <div class="hm-title">
+          <span>商品管理</span>
+        </div>
+        <div class="user-admin">
+          <span>你好：高迪@文超！</span>
+          <a href="">退出</a>
+        </div>
+      </div>
+    </div>
+    <!-- 头部结束 -->
+    <!-- 内容部分开始 -->
+    <div class="hm-content">
+      <!-- 左边导航栏 -->
+      <div class="hm-nav-left">
+        <!-- 导航列表 -->
+        <div class="hm-nav">
+          <div class="nav-list">
+            <div class="nav-close">
+              <div class="nav-top clear">
+                  <span>店铺</span>
+                  <i class="icon-top"></i>
+              </div>
+              <ul>
+                <li><a href="profit-detailed.html">收益明细</a></li>
+                <li><a href="asset-admin.html">资产管理</a></li>
+                <li><a href="user-info.html">基本信息</a></li>
+                <li><a href="cooperation-express.html">合作快递</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="nav-list">
+            <div class="nav-close">
+              <div class="nav-top clear">
+                  <span>订单</span>
+                  <i class="icon-bottom"></i>
+              </div>
+              <ul>
+                <li><a href="order-admin.html">全部</a></li>
+                <li><a href="pending-delivery.html">待发货</a></li>
+                <li><a href="change-info.html">已发货</a></li>
+                <li><a href="order-over.html">已完成</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="nav-list">
+            <div class="nav-close nav-open">
+              <div class="nav-top clear">
+                  <span>商品</span>
+                  <i class="icon-bottom"></i>
+              </div>
+              <ul>
+                <li class="active"><a href="shop-admin.html">商品管理</a></li>
+                <li><a href="add-shop.html">添加商品</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 右边内容 -->
+      <div class="hm-list-right">
+        <!-- 综合搜索按钮 -->
+        <div class="hm-shop-admin">
+          <!-- 综合搜索 -->
+          <ul class="hm-shop-search">
+            <li>
+              <label>
+                <span>商品名称:</span>
+                <input type="text">
+              </label>
+            </li>
+            <li>
+              <label>
+                <span>商品编号:</span>
+                <input type="text">
+              </label>
+            </li>
+            <li>
+              <label>
+                <span>商品分类:</span>
+                <input type="text">
+              </label>
+            </li>
+            <li class="clear">
+              <h3>状态:</h3>
+              <div class="state-select">
+                <span id="state-text">全部</span>
+                <i></i>
+                <ul id="state-list">
+                  <li>上架</li>
+                  <li>下架</li>
+                  <li>代驾</li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <button class="shop-refresh-but">
+                <i></i>
+              </button>
+            </li>
+            <li>
+              <button class="shop-search-but">
+                  <i></i>
+              </button>
+            </li>
+          </ul>
+          <!-- 邮政信息 -->
+        </div>
+        <!-- 商品管理列表 -->
+        <div class="hm-shop-list">
+          <table>
+            <thead>
+              <tr>
+                <th><input type="checkbox"></th>
+                <th>ID号</th>
+                <th></th>
+                <th>商品编号</th>
+                <th>类型</th>
+                <th>商品名称</th>
+                <th>价格</th>
+                <th>上架</th>
+                <th>操作</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="checkbox"></td>
+                <td>1</td>
+                <td><img src="img/hm-pic/hm-small-06-842b8ad889.jpg" alt="" width="80" height="80"></td>
+                <td>HM28374656</td>
+                <td>服装</td>
+                <td>男士韩版毛领夹克</td>
+                <td>500</td>
+                <td>
+                  <div class="slider-select slider-open">
+                    <div class="slider-circular"></div>
+                  </div>
+                </td>
+                <td>
+                  <a href="update-shop.html">修改</a>
+                  <button>删除</button>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox"></td>
+                <td>1</td>
+                <td><img src="img/hm-pic/hm-small-05-43abcf787f.jpg" alt="" width="80" height="80"></td>
+                <td>HM28374656</td>
+                <td>服装</td>
+                <td>男士韩版毛领夹克</td>
+                <td>500</td>
+                <td>
+                  <div class="slider-select slider-close">
+                    <div class="slider-circular"></div>
+                  </div>
+                </td>
+                <td>
+                  <a href="update-shop.html">修改</a>
+                  <button>删除</button>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox"></td>
+                <td>1</td>
+                <td><img src="img/hm-pic/hm-small-06-842b8ad889.jpg" alt="" width="80" height="80"></td>
+                <td>HM28374656</td>
+                <td>服装</td>
+                <td>男士韩版毛领夹克</td>
+                <td>500</td>
+                <td>
+                  <div class="slider-select slider-open">
+                    <div class="slider-circular"></div>
+                  </div>
+                </td>
+                <td>
+                  <a href="update-shop.html">修改</a>
+                  <button>删除</button>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox"></td>
+                <td>1</td>
+                <td><img src="img/hm-pic/hm-small-05-43abcf787f.jpg" alt="" width="80" height="80"></td>
+                <td>HM28374656</td>
+                <td>服装</td>
+                <td>男士韩版毛领夹克</td>
+                <td>500</td>
+                <td>
+                  <div class="slider-select slider-close">
+                    <div class="slider-circular"></div>
+                  </div>
+                </td>
+                <td>
+                  <a href="update-shop.html">修改</a>
+                  <button>删除</button>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox"></td>
+                <td>1</td>
+                <td><img src="img/hm-pic/hm-small-06-842b8ad889.jpg" alt="" width="80" height="80"></td>
+                <td>HM28374656</td>
+                <td>服装</td>
+                <td>男士韩版毛领夹克</td>
+                <td>500</td>
+                <td>
+                  <div class="slider-select slider-open">
+                    <div class="slider-circular"></div>
+                  </div>
+                </td>
+                <td>
+                  <a href="update-shop.html">修改</a>
+                  <button>删除</button>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox"></td>
+                <td>1</td>
+                <td><img src="img/hm-pic/hm-small-05-43abcf787f.jpg" alt="" width="80" height="80"></td>
+                <td>HM28374656</td>
+                <td>服装</td>
+                <td>男士韩版毛领夹克</td>
+                <td>500</td>
+                <td>
+                  <div class="slider-select slider-close">
+                    <div class="slider-circular"></div>
+                  </div>
+                </td>
+                <td>
+                  <a href="update-shop.html">修改</a>
+                  <button>删除</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="page clear">
+            <div class="shop-list-del">
+              <button>批量删除</button>
+            </div>
+            <div class="page-group">
+              <input type="text">
+              <button>跳转</button>
+              <div class="page-list">
+                <a href="">上一页</a>
+                <a class="active" href="">1</a>
+                <a href="">2</a>
+                <a href="">3</a>
+                <a href="">4</a>
+                <span>...</span>
+                <a href="">30</a>
+                <a href="">尾页</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 内容部分结束 -->
+  </body>
+</html>
