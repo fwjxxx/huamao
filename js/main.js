@@ -1,9 +1,18 @@
 require.config({
     paths: {
-        'jquery': '../static/jquery/jquery.min'
+        jquery: '../static/jquery/jquery.min',
+        pagination: '../static/page//jquery.pagination'
+    },
+    shim: {
+      bootstrap: {
+        deps: ['jquery']
+      },
+      pagination: {
+        deps: ['jquery']
+      }
     }
 });
-require(['jquery'], function($) {
+require(['jquery','pagination'], function($) {
 
     $('.hm-nav .nav-list').each(function(i) {
         $(this).on('click', function() {
@@ -109,6 +118,21 @@ require(['jquery'], function($) {
             }
         });
     });
+    //page分页功能
+    $('.page-list').pagination({
+        pageCount: 50,
+        jump: true,
+        coping: true,
+        homePage: 1,
+        endPage: 50,
+        prevContent: '上页',
+        nextContent: '下页',
+        callback: function (api) {
+            var pagenum = api.getCurrent();
+            console.log(pagenum)
+        }
+    });
+    // $('.page-list') 
     // $('.company-title').mouseenter(function() {
     //     $('.link-nav').show();
     // }).mouseleave(function() {
