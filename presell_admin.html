@@ -22,7 +22,7 @@
       </div>
       <div class="hm-info-top">
         <div class="hm-title">
-          <span>提现管理</span>
+          <span>预售品管理</span>
         </div>
         <div class="user-admin">
           <span>你好：高迪@文超！</span>
@@ -38,14 +38,14 @@
         <!-- 导航列表 -->
         <div class="hm-nav">
           <div class="nav-list">
-            <div class="nav-close nav-open">
+            <div class="nav-close">
               <div class="nav-top clear">
                   <span>店铺</span>
-                  <i class="icon-top"></i>
+                  <i class="icon-bottom"></i>
               </div>
               <ul>
                 <li><a href="profit-detailed.html">收益明细</a></li>
-                <li class="active"><a href="asset-admin.html">资产管理</a></li>
+                <li><a href="asset-admin.html">资产管理</a></li>
                 <li><a href="user-info.html">基本信息</a></li>
                 <li><a href="cooperation-express.html">合作快递</a></li>
               </ul>
@@ -78,13 +78,13 @@
             </div>
           </div>
           <div class="nav-list">
-            <div class="nav-close">
+            <div class="nav-close nav-open">
               <div class="nav-top clear">
                   <span>预售品</span>
-                  <i class="icon-bottom"></i>
+                  <i class="icon-top"></i>
               </div>
               <ul>
-                <li><a href="presell_admin.html">预售品管理</a></li>
+                <li class="active"><a href="presell_admin.html">预售品管理</a></li>
                 <li><a href="presell_add.html">预售品添加</a></li>
               </ul>
             </div>
@@ -95,43 +95,60 @@
       <div class="hm-list-right">
         <!-- 基本信息 -->
         <div class="hm-basic-info">
-          <!-- 审核 提现 选择  -->
+          <!-- 审核中 预售中 待回馈 回馈中 已结束 未通过 -->
           <div class="auditing-choice">
-            <a href="cash-admin.html" class="active">提现申请</a>
-            <a href="cash-audit-1.html">审核中</a>
-            <a href="cash-audit-2.html">已通过</a>
-            <a href="cash-audit-3.html">未通过</a>
+            <a href="cash-admin.html" class="active">审核中</a>
+            <a href="cash-audit-1.html">预售中</a>
+            <a href="cash-audit-2.html">待回馈</a>
+            <a href="cash-audit-3.html">回馈中</a>
+            <a href="cash-audit-1.html">已结束</a>
+            <a href="cash-audit-2.html">未通过</a>
           </div>
         </div>
-        <!-- 提现申请  -->
-        <div class="withdrawals-box">
-          <div class="withdrawals-text">
-            <h4>可提现</h4>
-            <p>8754.23</p>
+        <!-- 审核中  -->
+        <div class="hm-presell-list">
+          <!-- 审核中列表 -->
+          <div class="presell-box">
+            <table>
+              <thead>
+                <tr>
+                  <th colspan="2">名称</th>
+                  <th>价格</th>
+                  <th>时间</th>
+                  <th>操作</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <img src="img/hm-pic/hm-03-ee5e53b619.jpg" alt="">
+                  </td>
+                  <td>
+                    <h4>女生韩版ins网红同款气质包包</h4>
+                    <p>商品编号：HM454245</p>
+                    <p>分类：包包</p>
+                    <p>数量：500</p>
+                  </td>
+                  <td>
+                    <p>预订价：10元</p>
+                    <p>预购价：100元</p>
+                    <p>出厂价：120元</p>
+                    <p>总让利：25%</p>
+                  </td>
+                  <td>
+                    <p>预购结束时间：</p>
+                    <p>2018.02.03</p>
+                    <p>回馈开始时间：</p>
+                    <p>2019.02.09</p>
+                  </td>
+                  <td>
+                    <button>修改</button>
+                    <button>删除</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
-          <ul class="withdrawals-write">
-            <li>
-              <label>
-                <span>银行卡号：</span>
-                <input type="text">
-              </label>
-            </li>
-            <li>
-              <label>
-                <span>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：</span>
-                <input type="text">
-              </label>
-            </li>
-            <li>
-              <label>
-                <span>金&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;额：</span>
-                <input type="text">
-              </label>
-            </li>
-            <li>
-              <button>提交申请</button>
-            </li>
-          </ul>
         </div>
       </div>
     </div>

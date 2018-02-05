@@ -1,7 +1,10 @@
+
+
 require.config({
     paths: {
         jquery: '../static/jquery/jquery.min',
-        pagination: '../static/page//jquery.pagination'
+        pagination: '../static/page//jquery.pagination',
+        upload: '../static/upload'
     },
     shim: {
       bootstrap: {
@@ -9,11 +12,14 @@ require.config({
       },
       pagination: {
         deps: ['jquery']
+      },
+      upload: {
+        deps: ['jquery']
       }
     }
 });
-require(['jquery','pagination'], function($) {
-
+require(['jquery','pagination','upload'], function($) {
+    //导航栏功能
     $('.hm-nav .nav-list').each(function(i) {
         $(this).on('click', function() {
             $('.nav-close').removeClass('nav-open');
@@ -52,6 +58,7 @@ require(['jquery','pagination'], function($) {
         });
     });
 
+    //选择上架下架功能
     $('.hm-shop-list tbody tr').each(function(i) {
         $(this).find('.slider-select').on('click', function() {
             if($(this).hasClass('slider-open')) {
@@ -92,31 +99,36 @@ require(['jquery','pagination'], function($) {
     $('#expressAdd').on('click', function(){
         let title = $('#expressName').val();
         let str = '<li><label><input type="checkbox" name="expressItem"><span>'+ title +'</span></label></li>'
+        $('#expressName').val('');
         $('.express-list ul').append(str)
+        $('.express-list li').each(function(){
+            $(this).on('click', function(){
+                if ($(this).find('input').attr("checked") == 'checked') {
+                    $(this).find('input').attr("checked", false);
+                    $(this).find('input').prop("checked", false);
+                } else {
+                    $(this).find('input').attr("checked", true);
+                    $(this).find('input').prop("checked", true);
+                }
+            });
+        });
     });
     //删除快递公司
     $('#expressDel').on('click', function(){
-        // alert(1)
         if ($('.express-list li').find("[name = expressItem]:checked").length > 0) {
-            $('.express-list li').each(function(i) {
-                if ($(this).find("[name = expressItem]:checkbox").attr("checked") == 'checked') {
-                    $(this).remove('li');
-                }
-            });
+            // setTimeout(function(){
+                console.log($('.express-list li').length);
+                $('.express-list li').each(function(i) {
+                    // alert(3)
+                    if ($(this).find("[name = expressItem]:checkbox").attr("checked") == 'checked') {
+                        console.log($(this).find("span").text());
+                        $(this).remove('li');
+                    }
+                });
+            // },100);
         } else {
             alert('请选择删除快递公司');
         }
-    });
-    $('.express-list li').each(function(){
-        $(this).on('click', function(){
-            if ($(this).find('input').attr("checked") == 'checked') {
-                $(this).find('input').attr("checked", false);
-                $(this).find('input').prop("checked", false);
-            } else {
-                $(this).find('input').attr("checked", true);
-                $(this).find('input').prop("checked", true);
-            }
-        });
     });
     //page分页功能
     $('.page-list').pagination({
@@ -130,6 +142,22 @@ require(['jquery','pagination'], function($) {
         callback: function (api) {
             var pagenum = api.getCurrent();
             console.log(pagenum)
+        }
+    });
+    //上传图片
+    $("#js_uploadBtn").ajaxImageUpload({
+        url: 'http://192.168.1.128:7071/lb_console/file/upload.do', //上传的服务器地址
+        // before: function () {
+        //     alert('上传前回调函数');
+        // },
+        success:function(data){
+            // alert('上传成功回调函数');
+            console.log(data.url);
+        },
+        error:function (e) {
+            alert(1)
+            alert('上传失败回调函数');
+            // console.log(e);
         }
     });
     // $('.page-list') 
