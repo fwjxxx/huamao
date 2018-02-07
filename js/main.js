@@ -83,6 +83,7 @@ require(['jquery','pagination','upload'], function($) {
         });
     });
 
+    //余额转入 余额转出 权益增加 权益减少 选择列表
     $('.balance-opt a').each(function(i) {
         $(this).on('click', function() {
             $('.balance-opt a').removeClass('active')
@@ -159,6 +160,19 @@ require(['jquery','pagination','upload'], function($) {
             alert('上传失败回调函数');
             // console.log(e);
         }
+    });
+
+    //余额转入 余额转出 权益增加 权益减少 选择列表
+    $('.auditing-choice a').each(function(i) {
+        $(this).on('click', function() {
+            $('.auditing-choice a').removeClass('active')
+            $(this).addClass('active');
+            var num = $('.auditing-choice a').index(this);
+            $('.hm-presell-list .presell-table').removeClass('presell-open');
+            $('.hm-presell-list .presell-table').addClass('presell-close');
+            $('.hm-presell-list .presell-table').eq(num).removeClass('presell-close');
+            $('.hm-presell-list .presell-table').eq(num).addClass('presell-open');
+        });
     });
     // $('.page-list') 
     // $('.company-title').mouseenter(function() {
