@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>华猫</title>
     <link rel="stylesheet" href="css/reset-0e27f0c88f.css">
-    <link rel="stylesheet" href="css/index-3edc7d0cdf.css">
-    <script src="static/require.js" data-main="js/main-d1396b0562.js"></script>
+    <link rel="stylesheet" href="css/index-26c8a1cd0f.css">
+    <script src="static/Calendar.js"></script>
+    <script src="static/require.js" data-main="js/main-91c32809ba.js"></script>
   </head>
   <body>
     <!-- 头部开始 -->
@@ -130,9 +131,9 @@
                     <input type="text">
                   </label>
                   <div class="presell-num-list">
-                    <span>3</span>
+                    <span>盒</span>
                     <i></i>
-                    <ul>
+                    <ul id="presell-list-version">
                       <li>个</li>
                       <li>盒</li>
                     </ul>
@@ -140,19 +141,19 @@
                 </div>
                 <div class="presell-profits">
                   <label>
-                    <span>平台让利：消费资产让利<b>10</b>%</span>
-                    <p>让利给平台<input type="text">%</p>
+                    <span>平台让利：消费资产让利10%</span>
+                    <p>让利给平台<input type="text" value="0" id="presell-profits-input">%</p>
                   </label>
-                  <strong>总  让  利：<b>30</b>%</strong>
+                  <strong>总  让  利：<b>10</b>%</strong>
                 </div>
                 <div class="presell-date">
                   <label>
                     <span>预购结束时间：</span>
-                    <input type="text">
+                    <input type="text" onClick="new Calendar().show(this);">
                   </label>
                   <label>
                     <span>回馈开始时间：</span>
-                    <input type="text">
+                    <input type="text" onClick="new Calendar().show(this);">
                   </label>
                 </div>
                 <div class="presell-feedback">

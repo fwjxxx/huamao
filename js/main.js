@@ -174,6 +174,22 @@ require(['jquery','pagination','upload'], function($) {
             $('.hm-presell-list .presell-table').eq(num).addClass('presell-open');
         });
     });
+
+    //预售品数量
+    $('.presell-num-list').on('click',function(){
+        $('#presell-list-version').toggle();
+        $('#presell-list-version li').each(function(){
+            $(this).on('click',function(){
+                $('.presell-num-list span').text($(this).text());
+            });
+        });
+    });
+    //预售品平台让利
+    $('#presell-profits-input').keyup(function() {
+        // $('#presell-profits-input').val('');
+        let a = parseInt($(this).val()) + 10;
+        $('.presell-profits b').text(a);
+    });
     // $('.page-list') 
     // $('.company-title').mouseenter(function() {
     //     $('.link-nav').show();
