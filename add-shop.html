@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>华猫</title>
     <link rel="stylesheet" href="css/reset-0e27f0c88f.css">
-    <link rel="stylesheet" href="css/index-26c8a1cd0f.css">
-    <script src="static/require.js" data-main="js/main-91c32809ba.js"></script>
+    <link rel="stylesheet" href="css/index-eb040e8d78.css">
+    <script src="static/require.js" data-main="js/main-d83fbea2a3.js"></script>
   </head>
   <body>
     <!-- 头部开始 -->
@@ -25,8 +25,9 @@
           <span>添加商品</span>
         </div>
         <div class="user-admin">
-          <span>你好：高迪@文超！</span>
-          <a href="">退出</a>
+          <span>你好：<b></b>！</span>
+          <a href="putting.html">设置</a>
+          <a href="javascript:void(0);" id="loginOut">退出</a>
         </div>
       </div>
     </div>
@@ -59,9 +60,9 @@
               </div>
               <ul>
                 <li><a href="order-admin.html">全部</a></li>
-                <li><a href="pending-delivery.html">待发货</a></li>
-                <li><a href="change-info.html">已发货</a></li>
-                <li><a href="order-over.html">已完成</a></li>
+                <li><a href="pending-delivery.html?status='= 2'">待发货</a></li>
+                <li><a href="change-info.html?status='= 3'">已发货</a></li>
+                <li><a href="order-over.html?status='= 4'">已完成</a></li>
               </ul>
             </div>
           </div>
@@ -132,66 +133,8 @@
           </div>
           <div class="shop-admin-spec clear">
             <div class="shop-spec clear">
-              <div class="shop-spec-left">
-                <h3>商品规格</h3>
-                <button>添加</button>
-              </div>
-              <div class="shop-spec-right">
-                <table>
-                  <thead>
-                    <tr>
-                      <th>规格</th>
-                      <th>型号1</th>
-                      <th>型号2</th>
-                      <th></th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>
-                        <input type="text">
-                      </td>
-                      <td>
-                        <input type="text">
-                      </td>
-                      <td>
-                        <input type="text">
-                      </td>
-                      <td>
-                        <button>删除</button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <input type="text">
-                      </td>
-                      <td>
-                        <input type="text">
-                      </td>
-                      <td>
-                        <input type="text">
-                      </td>
-                      <td>
-                        <button>删除</button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <input type="text">
-                      </td>
-                      <td>
-                        <input type="text">
-                      </td>
-                      <td>
-                        <input type="text">
-                      </td>
-                      <td>
-                        <button>删除</button>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+              <h3>商品详情介绍</h3>
+              <textarea name="" id="" placeholder="">这件衣服的优点在于里穿不扎人。</textarea>
             </div>
             <div class="shop-img-list">
                 <h3>商品图片集</h3>
@@ -204,9 +147,67 @@
                 <p>点击图片可更换</p>
             </div>
           </div>
-          <div class="shop-admin-details">
-            <h3>商品详情介绍</h3>
-            <p>这件衣服的优点在于里穿不扎人。</p>
+          <div class="shop-admin-details clear">
+            <div class="shop-spec-left">
+              <h3>商品规格</h3>
+              <button id="shopSpecAdd">添加</button>
+            </div>
+            <div class="shop-spec-right">
+              <table>
+                <thead>
+                  <tr>
+                    <th>规格</th>
+                    <th>型号1</th>
+                    <th>型号2</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <input type="text">
+                    </td>
+                    <td>
+                      <input type="text">
+                    </td>
+                    <td>
+                      <input type="text">
+                    </td>
+                    <td>
+                      <button>删除</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="text">
+                    </td>
+                    <td>
+                      <input type="text">
+                    </td>
+                    <td>
+                      <input type="text">
+                    </td>
+                    <td>
+                      <button>删除</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="text">
+                    </td>
+                    <td>
+                      <input type="text">
+                    </td>
+                    <td>
+                      <input type="text">
+                    </td>
+                    <td>
+                      <button>删除</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
           <div class="shop-admin-but">
             <button>保存</button>

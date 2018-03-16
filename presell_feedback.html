@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>华猫</title>
+    <link rel="stylesheet" href="css/reset-0e27f0c88f.css">
+    <link rel="stylesheet" href="css/index-eb040e8d78.css">
+    <script src="static/Calendar.js"></script>
+    <script src="static/require.js" data-main="js/main-d83fbea2a3.js"></script>
+  </head>
+  <body>
+    <!-- 头部开始 -->
+    <div class="hm-admin-top">
+      <!-- logo -->
+      <div class="hm-logo">
+        <div class="logo">
+          <img src="img/logo-54b834f940.png" alt="">
+        </div>
+        <div class="logo-text">
+          <span>华猫V1.0</span>
+        </div>
+      </div>
+      <div class="hm-info-top">
+        <div class="hm-title">
+          <span>添加预售品</span>
+        </div>
+        <div class="user-admin">
+          <span>你好：<b></b>！</span>
+          <a href="putting.html">设置</a>
+          <a href="javascript:void(0);" id="loginOut">退出</a>
+        </div>
+      </div>
+    </div>
+    <!-- 头部结束 -->
+    <!-- 内容部分开始 -->
+    <div class="hm-content">
+      <!-- 左边导航栏 -->
+      <div class="hm-nav-left">
+        <!-- 导航列表 -->
+        <div class="hm-nav">
+          <div class="nav-list">
+            <div class="nav-close">
+              <div class="nav-top clear">
+                  <span>店铺</span>
+                  <i class="icon-bottom"></i>
+              </div>
+              <ul>
+                <li><a href="profit-detailed.html">收益明细</a></li>
+                <li><a href="asset-admin.html">资产管理</a></li>
+                <li><a href="user-info.html">基本信息</a></li>
+                <li><a href="cooperation-express.html">合作快递</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="nav-list">
+            <div class="nav-close">
+              <div class="nav-top clear">
+                  <span>订单</span>
+                  <i class="icon-bottom"></i>
+              </div>
+              <ul>
+                <li><a href="order-admin.html">全部</a></li>
+                <li><a href="pending-delivery.html?status='= 2'">待发货</a></li>
+                <li><a href="change-info.html?status='= 3'">已发货</a></li>
+                <li><a href="order-over.html?status='= 4'">已完成</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="nav-list">
+            <div class="nav-close">
+              <div class="nav-top clear">
+                  <span>商品</span>
+                  <i class="icon-bottom"></i>
+              </div>
+              <ul>
+                <li><a href="shop-admin.html">商品管理</a></li>
+                <li><a href="add-shop.html">添加商品</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="nav-list">
+            <div class="nav-close nav-open">
+              <div class="nav-top clear">
+                  <span>预售品</span>
+                  <i class="icon-top"></i>
+              </div>
+              <ul>
+                <li class="active"><a href="presell_admin.html">预售品管理</a></li>
+                <li><a href="presell_add.html">预售品添加</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 右边内容 -->
+      <div class="hm-list-right">
+        <!-- 预售品回馈列表 -->
+        <div class="hm-presell-purchaser">
+          <table>
+            <thead>
+              <tr>
+                <th>序号</th>
+                <th>姓名</th>
+                <th>联系方式</th>
+                <th>数量</th>
+                <th>回馈明细</th>
+                <th>操作</th>
+                <th>
+                  <span>状态</span>
+                  <div class="purchaser-balance-list">
+                      <span></span>
+                      <i></i>
+                      <ul id="purchaser-list-version">
+                        <li>未结算</li>
+                        <li>结算中</li>
+                        <li>已结算</li>
+                      </ul>
+                    </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>张石头</td>
+                <td>13701111111</td>
+                <td>10</td>
+                <td>
+                  <span>产品回馈: 1</span>
+                  <span>回购回馈: 9</span>
+                </td>
+                <td>
+                  <button id="feedback-goods" value="">发货</button>
+                  <button id="feedback-liquidation" value="">资金清算</button>
+                </td>
+                <td>未结算</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>张石头</td>
+                <td>13701111111</td>
+                <td>10</td>
+                <td>
+                    <span>产品回馈: 1</span>
+                    <span>回购回馈: 9</span>
+                </td>
+                <td>
+                  <button>发货</button>
+                  <button>资金清算</button>
+                </td>
+                <td>未结算</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>张石头</td>
+                <td>13701111111</td>
+                <td>10</td>
+                <td>
+                    <span>产品回馈: 1</span>
+                    <span>回购回馈: 9</span>
+                </td>
+                <td>
+                  <button>发货</button>
+                  <button>资金清算</button>
+                </td>
+                <td>结算中</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>张石头</td>
+                <td>13701111111</td>
+                <td>10</td>
+                <td>
+                    <span>产品回馈: 1</span>
+                    <span>回购回馈: 9</span>
+                </td>
+                <td>
+                  <button>发货</button>
+                  <button>资金清算</button>
+                </td>
+                <td>已结算</td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- 分页 -->
+          <div class="page clear">
+              <div class="shop-list-del"></div>
+              <div class="page-group">
+                <div class="page-list"></div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <!-- 内容部分结束 -->
+    <!-- 发货填写单子 -->
+    <div class="order-mask order-close">
+      <div class="order-pop-box">
+        <h3>发货审核</h3>
+        <div class="order-express-write">
+          <div class="express-title-box">
+            <div class="express-title">
+              <span>发货快递：</span>
+              <div class="express-title-choice">
+                <span id="express-company"></span>
+                <i></i>
+                <ul class="express-title-list"></ul>
+              </div>
+            </div>
+          </div>
+          <div class="courier-number">
+            <label>
+              <span>快递单号：</span>
+              <input type="text" id="orderShopExpressId">
+            </label>
+          </div>
+        </div>
+        <div class="order-pop-but">
+          <button id="order-cancel">取消</button>
+          <button id="orderShopAddConfirm">确认</button>
+        </div>
+      </div>
+    </div>
+    <!-- 资金清算 -->
+    <div class="presell-mask order-close">
+      <div class="presell-pop-box">
+        <h3>资金清算</h3>
+        <ul>
+          <li>
+            <span>产品回购：只能管理机器人  X9</span>
+          </li>
+          <li>
+            <span>支付：180元</span>
+          </li>
+          <li>
+            <span>产品销售：只能管理机器人  X1</span>
+          </li>
+          <li>
+            <span>收益：90元</span>
+          </li>
+        </ul>
+        <div class="presell-mask-sum">
+          <h4>总计</h4>
+          <p>支付：90元</p>
+        </div>
+        <div class="presell-pop-but">
+          <button id="presell-cancel">取消</button>
+          <button id="presell-Confirm">支付</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

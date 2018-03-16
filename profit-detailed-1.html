@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>华猫</title>
     <link rel="stylesheet" href="css/reset-0e27f0c88f.css">
-    <link rel="stylesheet" href="css/index-26c8a1cd0f.css">
-    <script src="static/require.js" data-main="js/main-91c32809ba.js"></script>
+    <link rel="stylesheet" href="css/index-eb040e8d78.css">
+    <script src="static/require.js" data-main="js/main-d83fbea2a3.js"></script>
   </head>
   <body>
     <!-- 头部开始 -->
@@ -25,8 +25,9 @@
           <span>收益明细</span>
         </div>
         <div class="user-admin">
-          <span>你好：高迪@文超！</span>
-          <a href="">退出</a>
+          <span>你好：<b></b>！</span>
+          <a href="putting.html">设置</a>
+          <a href="javascript:void(0);" id="loginOut">退出</a>
         </div>
       </div>
     </div>
@@ -59,9 +60,9 @@
               </div>
               <ul>
                 <li><a href="order-admin.html">全部</a></li>
-                <li><a href="pending-delivery.html">待发货</a></li>
-                <li><a href="change-info.html">已发货</a></li>
-                <li><a href="order-over.html">已完成</a></li>
+                <li><a href="pending-delivery.html?status='= 2'">待发货</a></li>
+                <li><a href="change-info.html?status='= 3'">已发货</a></li>
+                <li><a href="order-over.html?status='= 4'">已完成</a></li>
               </ul>
             </div>
           </div>
@@ -97,64 +98,13 @@
         <div class="hm-basic-info">
           <!-- 收益明细单 -->
           <div class="hm-detailed-list clear">
-            <ul class="order-info">
-              <li>
-                <span>订单编号：</span>
-                <strong>201884758675</strong>
-              </li>
-              <li>
-                <span>订单状态：</span>
-                <strong>已完成</strong>
-              </li>
-              <li>
-                <span>购买用户：</span>
-                <strong>用户昵称</strong>
-              </li>
-              <li>
-                <span>支付时间：</span>
-                <strong>2017.12.30</strong>
-              </li>
-              <li>
-                <span>支付方式：</span>
-                <strong>支付宝</strong>
-              </li>
-              <li>
-                <span>发货时间：</span>
-                <strong>2018.01.02</strong>
-              </li>
-              <li>
-                <span>快递方式：</span>
-                <strong>中通</strong>
-              </li>
-              <li>
-                <span>快递单号：</span>
-                <strong>10000215142514</strong>
-              </li>
-              <li>
-                <span>完成时间：</span>
-                <strong>2018.01.05</strong>
-              </li>
-            </ul>
+            <ul class="order-info"></ul>
             <div class="buyers-info">
               <div class="buyers-message">
                 <span>买家留言：</span>
-                <p>衣服要偏小一号噢，颜色要正噢</p>
+                <p></p>
               </div>
-              <div class="buyers-address">
-                <h4>收货人信息：</h4>
-                <p>
-                    姓名：<span>帝文潮</span>
-                </p>
-                <p>
-                    手机号码：<span>18514276985</span>
-                </p>
-                <p>
-                    详细地址：<span>北京朝阳区芍药居吉利家园</span>
-                </p>
-                <p>
-                    邮编：<span>100000</span>
-                </p>
-              </div>
+              <div class="buyers-address"></div>
             </div>
           </div>
           <div class="hm-commodity-info">
@@ -171,32 +121,15 @@
                     <th>总价</th>
                   </tr>
                 </thead>
-                <tbody>
-                  <tr>
-                    <td>男士衬衫韩版加肥加大</td>
-                    <td>HM2894785556</td>
-                    <td>XXXL</td>
-                    <td>200</td>
-                    <td>10</td>
-                    <td>2000</td>
-                  </tr>
-                  <tr>
-                    <td>男士衬衫韩版加肥加大</td>
-                    <td>HM2894785556</td>
-                    <td>XXXL</td>
-                    <td>200</td>
-                    <td>10</td>
-                    <td>2000</td>
-                  </tr>
-                </tbody>
+                <tbody id="shopInfoList"></tbody>
               </table>
             </div>
             <div class="commodity-sum">
-              <span>商品共计：20</span>
-              <span>商品总价：2000</span>
+              <span>商品共计：<b></b></span>
+              <span>商品总价：<strong></strong></span>
             </div>
             <div class="commodity-assets">
-              <span>权益类资产：+100个</span>
+              <span>权益类资产：<b></b>个</span>
             </div>
           </div>
       </div>

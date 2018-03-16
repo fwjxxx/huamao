@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>华猫</title>
     <link rel="stylesheet" href="css/reset-0e27f0c88f.css">
-    <link rel="stylesheet" href="css/index-26c8a1cd0f.css">
+    <link rel="stylesheet" href="css/index-eb040e8d78.css">
+    <script src="static/require.js" data-main="js/login-f8f271b1a4.js"></script>
   </head>
   <body>
     <div class="hm-login-text">
@@ -14,38 +15,38 @@
     <div class="hm-login">
       <div class="login-group">
         <div class="login-warning">
-          <span>你输入的用户名或密码有错误</span>
+          <span></span>
         </div>
         <div class="login-group-text">
           <label>
             <h2>账号</h2>
-            <input type="text" class="login-text">
+            <input type="text" class="login-text" id="userName">
           </label>
         </div>
         <div class="login-group-text">
           <label>
             <h2>密码</h2>
-            <input type="password" class="login-text">
+            <input type="password" class="login-text" id="password">
           </label>
-          <div class="login-group-checkbox">
+          <!-- <div class="login-group-checkbox">
             <label>
               <input type="checkbox">
               <span>记住</span>
             </label>
-          </div>
+          </div> -->
         </div>
         <div class="login-group-text">
           <label>
             <h2>验证码</h2>
             <div class="login-group-code">
-                <input type="text">
-                <img src="img/hm-pic/code-04c9935dd5.jpg">
-                <a href="">换一下</a>
+                <input type="text" id="code">
+                <img src="">
+                <a href="javascript:void(0);" id="loginCode">换一下</a>
             </div>
           </label>
         </div>
         <div class="login-group-but">
-          <button>登录</button>
+          <button id="loginBut">登录</button>
         </div>
       </div>
     </div>

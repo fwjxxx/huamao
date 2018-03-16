@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>华猫</title>
     <link rel="stylesheet" href="css/reset-0e27f0c88f.css">
-    <link rel="stylesheet" href="css/index-26c8a1cd0f.css">
+    <link rel="stylesheet" href="css/index-eb040e8d78.css">
     <script src="static/Calendar.js"></script>
-    <script src="static/require.js" data-main="js/main-91c32809ba.js"></script>
+    <script src="static/require.js" data-main="js/main-d83fbea2a3.js"></script>
   </head>
   <body>
     <!-- 头部开始 -->
@@ -26,8 +26,9 @@
           <span>全部订单</span>
         </div>
         <div class="user-admin">
-          <span>你好：高迪@文超！</span>
-          <a href="">退出</a>
+          <span>你好：<b></b>！</span>
+          <a href="putting.html">设置</a>
+          <a href="javascript:void(0);" id="loginOut">退出</a>
         </div>
       </div>
     </div>
@@ -60,9 +61,9 @@
               </div>
               <ul>
                 <li class="active"><a href="order-admin.html">全部</a></li>
-                <li><a href="pending-delivery.html">待发货</a></li>
-                <li><a href="change-info.html">已发货</a></li>
-                <li><a href="order-over.html">已完成</a></li>
+                <li><a href="pending-delivery.html?status== 2">待发货</a></li>
+                <li><a href="change-info.html?status== 3">已发货</a></li>
+                <li><a href="order-over.html?status== 4">已完成</a></li>
               </ul>
             </div>
           </div>
@@ -100,188 +101,19 @@
           <div class="hm-order-seach">
             <label>
               <span>订单号:</span>
-              <input type="text" class="seach-text-1">
+              <input type="text" id="seachOrderId" class="seach-text-1">
               <span>收货人:</span>
-              <input type="text" class="seach-text-2">
-              <span>时间：</span>
-              <input type="text" onClick="new Calendar().show(this);">
-              <strong>——</strong>
-              <input type="text" onClick="new Calendar().show(this);">
-              <button>
-                <i></i>
-              </button>
+              <input type="text" id="seachOrderName" class="seach-text-2">
+              <button id="orderSearchBut"><i></i></button>
             </label>
           </div>
           <!-- 订单列表 -->
           <div class="hm-order-list">
-            <!-- 订单盒子 -->
-            <div class="order-list-box clear">
-              <!-- 订单盒子头部选择 -->
-              <div class="order-top clear">
-                <div class="order-number">
-                  <input type="checkbox">
-                  <span>订单号:8758465786785</span>
-                </div>
-                <div class="order-but-group">
-                  <a href="order-details.html">订单详情</a>
-                </div>
-              </div>
-              <!-- 订单盒子内容部分 -->
-              <div class="order-content clear">
-                <div class="order-img">
-                  <img src="img/hm-pic/hm-03-ee5e53b619.jpg" alt="">
-                </div>
-                <div class="order-shop-info">
-                  <h2>女生韩版ins网红同款气质包包</h2>
-                  <ul>
-                    <li>
-                      <p>商品编号：<span>HM454245</span></p> 
-                    </li>
-                    <li>
-                      <p>规格型号：<span>黑色XL</span></p> 
-                    </li>
-                    <li>
-                      <p>数量：<span>2</span></p>
-                    </li>
-                    <li>
-                      <p>支付时间：<span>2017-02-04</span></p>
-                    </li>
-                  </ul>
-                </div>
-                <div class="order-message">
-                  <ul>
-                    <li>
-                      <p>状态：<span>已发货</span></p>
-                    </li>
-                    <li>
-                      <p>留言：<span>获取获取获取买家留言</span></p>
-                    </li>
-                  </ul>
-                </div>
-                <div class="order-buyers-info">
-                  <ul>
-                    <li>
-                      <p>收货人：<span>帝文潮</span></p>
-                    </li>
-                    <li>
-                      <p>联系方式：<span>18526487952</span></p>
-                    </li>
-                    <li>
-                      <p>详细地址：<span>北京市丰台区航丰路财富天地2号楼</span></p>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <!-- 订单盒子 -->
-            <div class="order-list-box clear">
-              <!-- 订单盒子头部选择 -->
-              <div class="order-top clear">
-                <div class="order-number">
-                  <input type="checkbox">
-                  <span>订单号:8758465786785</span>
-                </div>
-                <div class="order-but-group">
-                  <a href="order-details.html">订单详情</a>
-                </div>
-              </div>
-              <!-- 订单盒子内容部分 -->
-              <div class="order-content clear">
-                <div class="order-img">
-                  <img src="img/hm-pic/hm-03-ee5e53b619.jpg" alt="">
-                </div>
-                <div class="order-shop-info">
-                  <h2>女生韩版ins网红同款气质包包</h2>
-                  <ul>
-                    <li>
-                      <p>商品编号：<span>HM454245</span></p> 
-                    </li>
-                    <li>
-                      <p>规格型号：<span>黑色XL</span></p> 
-                    </li>
-                    <li>
-                      <p>数量：<span>2</span></p>
-                    </li>
-                    <li>
-                      <p>支付时间：<span>2017-02-04</span></p>
-                    </li>
-                  </ul>
-                </div>
-                <div class="order-message">
-                  <ul>
-                    <li>
-                      <p>状态：<span>已发货</span></p>
-                    </li>
-                    <li>
-                      <p>留言：<span>获取获取获取买家留言</span></p>
-                    </li>
-                  </ul>
-                </div>
-                <div class="order-buyers-info">
-                  <ul>
-                    <li>
-                      <p>收货人：<span>帝文潮</span></p>
-                    </li>
-                    <li>
-                      <p>联系方式：<span>18526487952</span></p>
-                    </li>
-                    <li>
-                      <p>详细地址：<span>北京市丰台区航丰路财富天地2号楼</span></p>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <!-- 订单盒子内容部分 -->
-              <div class="order-content clear">
-                <div class="order-img">
-                  <img src="img/hm-pic/hm-03-ee5e53b619.jpg" alt="">
-                </div>
-                <div class="order-shop-info">
-                  <h2>女生韩版ins网红同款气质包包</h2>
-                  <ul>
-                    <li>
-                      <p>商品编号：<span>HM454245</span></p> 
-                    </li>
-                    <li>
-                      <p>规格型号：<span>黑色XL</span></p> 
-                    </li>
-                    <li>
-                      <p>数量：<span>2</span></p>
-                    </li>
-                    <li>
-                      <p>支付时间：<span>2017-02-04</span></p>
-                    </li>
-                  </ul>
-                </div>
-                <div class="order-message">
-                  <ul>
-                    <li>
-                      <p>状态：<span>已支付</span></p>
-                    </li>
-                    <li>
-                      <p>留言：<span>获取获取获取买家留言</span></p>
-                    </li>
-                  </ul>
-                </div>
-                <div class="order-buyers-info">
-                  <ul>
-                    <li>
-                      <p>收货人：<span>帝文潮</span></p>
-                    </li>
-                    <li>
-                      <p>联系方式：<span>18526487952</span></p>
-                    </li>
-                    <li>
-                      <p>详细地址：<span>北京市丰台区航丰路财富天地2号楼</span></p>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+            <div class="order-list"><!-- 订单盒子 --></div>
             <!-- 分页 -->
             <div class="page page-margin clear">
                 <div class="shop-list-del">
-                    <button>批量删除</button>
+                    <button id="orderListDel">批量删除</button>
                 </div>
                 <div class="page-group">
                   <div class="page-list"></div>

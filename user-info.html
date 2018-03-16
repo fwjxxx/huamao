@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>华猫</title>
     <link rel="stylesheet" href="css/reset-0e27f0c88f.css">
-    <link rel="stylesheet" href="css/index-26c8a1cd0f.css">
-    <script src="static/require.js" data-main="js/main-91c32809ba.js"></script>
+    <link rel="stylesheet" href="css/index-eb040e8d78.css">
+    <script src="static/require.js" data-main="js/main-d83fbea2a3.js"></script>
   </head>
   <body>
     <!-- 头部开始 -->
@@ -22,11 +22,12 @@
       </div>
       <div class="hm-info-top">
         <div class="hm-title">
-          <span>合作快递</span>
+          <span>基本信息</span>
         </div>
         <div class="user-admin">
-          <span>你好：高迪@文超！</span>
-          <a href="">退出</a>
+          <span>你好：<b></b>！</span>
+          <a href="putting.html">设置</a>
+          <a href="javascript:void(0);" id="loginOut">退出</a>
         </div>
       </div>
     </div>
@@ -59,9 +60,9 @@
               </div>
               <ul>
                 <li><a href="order-admin.html">全部</a></li>
-                <li><a href="pending-delivery.html">待发货</a></li>
-                <li><a href="change-info.html">已发货</a></li>
-                <li><a href="order-over.html">已完成</a></li>
+                <li><a href="pending-delivery.html?status='= 2'">待发货</a></li>
+                <li><a href="change-info.html?status='= 3'">已发货</a></li>
+                <li><a href="order-over.html?status='= 4'">已完成</a></li>
               </ul>
             </div>
           </div>
@@ -98,16 +99,16 @@
           <!-- 关注量 -->
           <div class="hm-shop-follow">
             <div class="img-info clear">
-              <div class="picture">
-                <img src="img/hm-pic/hm-02-534b4ff2a0.jpg" width="116" height="116" alt="">
+              <div class="picture" id="shop-picture">
+                <img src="" width="116" height="116" alt="">
               </div>
               <h3>
-                <p class="info-text">中性优衣品</p>
-                <p>港味复古民族风中性bf风</p>
+                <p class="info-text" id="shop-name"></p>
+                <p id="shop-desc"></p>
               </h3>
             </div>
             <div class="follow">
-              <span>关注量：50</span>
+              <span>关注量：<b id="followAttention"></b></span>
             </div>
           </div>
           <!-- 基本信息 -->
@@ -117,25 +118,27 @@
               <div class="shop-info-form">
                 <label>
                   <span>店铺名称：</span>
-                  <input type="text">
+                  <input type="text" id="shopName" disabled="true">
+                  <b>*</b>
                 </label>
               </div>
               <div class="shop-info-form">
                 <label>
                   <span>店铺介绍：</span>
-                  <input type="text">
+                  <input type="text" id="shopIntroduce" disabled="true">
                 </label>
               </div>
               <div class="shop-info-form">
                 <label>
                   <span>联系电话：</span>
-                  <input type="text">
+                  <input type="text" id="shopTelephone" disabled="true">
+                  <b>*</b>
                 </label>
               </div>
               <div class="shop-info-form">
                 <label>
                   <span>微&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;信：</span>
-                  <input type="text">
+                  <input type="text" id="shopWechat" disabled="true">
                 </label>
               </div>
             </div>
@@ -143,14 +146,18 @@
             <div class="shop-write-img">
               <h3>店铺头像</h3>
               <div class="shop-img">
-                  <img src="img/hm-pic/hm-01-cdf351ad8c.jpg" alt="">
-                  <input type="file" name="uploadFile" class="upload-input" id='js_uploadBtn' value=""/>
+                  <div class="shop-img-box">
+                      <img src="" alt="">
+                  </div>
+                  <input type="file" name="uploadFile" class="upload-input" id='js_uploadBtn' value="" disabled="disabled"/>
+                  <p>点击修改图片才可更换</p>
               </div>
             </div>
           </div>
           <!-- 按钮 -->
           <div class="hm-hold-info">
-            <button>保存</button>
+            <button id="shop-info-modify">修改</button>
+            <button class="hold-info-but" id="shop-info-preserve" disabled="disabled">保存</button>
           </div>
         </div>
       </div>

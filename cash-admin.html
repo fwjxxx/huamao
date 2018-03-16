@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>华猫</title>
     <link rel="stylesheet" href="css/reset-0e27f0c88f.css">
-    <link rel="stylesheet" href="css/index-26c8a1cd0f.css">
-    <script src="static/require.js" data-main="js/main-91c32809ba.js"></script>
+    <link rel="stylesheet" href="css/index-eb040e8d78.css">
+    <script src="static/require.js" data-main="js/main-d83fbea2a3.js"></script>
   </head>
   <body>
     <!-- 头部开始 -->
@@ -25,8 +25,9 @@
           <span>提现管理</span>
         </div>
         <div class="user-admin">
-          <span>你好：高迪@文超！</span>
-          <a href="">退出</a>
+          <span>你好：<b></b>！</span>
+          <a href="putting.html">设置</a>
+          <a href="javascript:void(0);" id="loginOut">退出</a>
         </div>
       </div>
     </div>
@@ -59,9 +60,9 @@
               </div>
               <ul>
                 <li><a href="order-admin.html">全部</a></li>
-                <li><a href="pending-delivery.html">待发货</a></li>
-                <li><a href="change-info.html">已发货</a></li>
-                <li><a href="order-over.html">已完成</a></li>
+                <li><a href="pending-delivery.html?status='= 2'">待发货</a></li>
+                <li><a href="change-info.html?status='= 3'">已发货</a></li>
+                <li><a href="order-over.html?status='= 4'">已完成</a></li>
               </ul>
             </div>
           </div>
@@ -95,43 +96,113 @@
       <div class="hm-list-right">
         <!-- 基本信息 -->
         <div class="hm-basic-info">
-          <!-- 审核 提现 选择  -->
+          <!-- 资产管理导航  -->
           <div class="auditing-choice">
-            <a href="cash-admin.html" class="active">提现申请</a>
-            <a href="cash-audit-1.html">审核中</a>
-            <a href="cash-audit-2.html">已通过</a>
-            <a href="cash-audit-3.html">未通过</a>
+            <a href="javascript:void(0);" class="active">提现申请</a>
+            <a href="javascript:void(0);">审核中</a>
+            <a href="javascript:void(0);">已通过</a>
+            <a href="javascript:void(0);">未通过</a>
           </div>
         </div>
-        <!-- 提现申请  -->
-        <div class="withdrawals-box">
-          <div class="withdrawals-text">
-            <h4>可提现</h4>
-            <p>8754.23</p>
+        <div id="cashAuditing">
+          <!-- 提现申请  -->
+          <div class="withdrawals-box  presell-open" id="cashAuditing-box">
+            <div class="withdrawals-text">
+              <h4>可提现</h4>
+              <p></p>
+            </div>
+            <ul class="withdrawals-write">
+              <li>
+                <label id="withdrawBankCard">
+                  <p></p>
+                  <span>银行卡号：</span>
+                  <input type="text">
+                </label>
+              </li>
+              <li>
+                <label id="withdrawUserName">
+                    <p></p>
+                  <span>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：</span>
+                  <input type="text">
+                </label>
+              </li>
+              <li>
+                <label id="withdrawMoney">
+                    <p></p>
+                  <span>金&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;额：</span>
+                  <input type="text">
+                </label>
+              </li>
+              <li>
+                <button id="withdrawSubmit">提交申请</button>
+              </li>
+            </ul>
           </div>
-          <ul class="withdrawals-write">
-            <li>
-              <label>
-                <span>银行卡号：</span>
-                <input type="text">
-              </label>
-            </li>
-            <li>
-              <label>
-                <span>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：</span>
-                <input type="text">
-              </label>
-            </li>
-            <li>
-              <label>
-                <span>金&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;额：</span>
-                <input type="text">
-              </label>
-            </li>
-            <li>
-              <button>提交申请</button>
-            </li>
-          </ul>
+          <!-- 审核列表1  -->
+          <div class="audit-box-list presell-close" id="cashAuditing-box">
+            <table>
+              <thead>
+                <tr>
+                  <th>提交时间</th>
+                  <th>姓名</th>
+                  <th>银行卡号</th>
+                  <th>金额</th>
+                  <th>手续费</th>
+                </tr>
+              </thead>
+              <tbody id="cashAudit"></tbody>
+            </table>
+            <div class="page clear">
+              <div class="shop-list-del"></div>
+              <div class="page-group">
+                <div class="page-list"></div>
+              </div>
+            </div>
+          </div>
+          <!-- 审核列表2  -->
+          <div class="audit-box-list presell-close" id="cashAuditing-box">
+            <table>
+              <thead>
+                <tr>
+                  <th>提交单号</th>
+                  <th>提交时间</th>
+                  <th>姓名</th>
+                  <th>银行卡号</th>
+                  <th>金额</th>
+                  <th>手续费</th>
+                </tr>
+              </thead>
+              <tbody id="cashPassed"></tbody>
+            </table>
+            <div class="page clear">
+              <div class="shop-list-del"></div>
+              <div class="page-group">
+                <div class="page-list"></div>
+              </div>
+            </div>
+          </div>
+          <!-- 审核列表2  -->
+          <div class="audit-box-list presell-close" id="cashAuditing-box">
+            <table>
+              <thead>
+                <tr>
+                  <th>提交时间</th>
+                  <th>姓名</th>
+                  <th>银行卡号</th>
+                  <th>金额</th>
+                  <th>手续费</th>
+                  <th>原因</th>
+                </tr>
+              </thead>
+              <tbody id="notThrough"></tbody>
+            </table>
+            <div class="page clear">
+              <div class="shop-list-del"></div>
+              <div class="page-group">
+                <div class="page-list"></div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

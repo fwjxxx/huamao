@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>华猫</title>
     <link rel="stylesheet" href="css/reset-0e27f0c88f.css">
-    <link rel="stylesheet" href="css/index-26c8a1cd0f.css">
+    <link rel="stylesheet" href="css/index-eb040e8d78.css">
     <script src="static/Calendar.js"></script>
-    <script src="static/require.js" data-main="js/main-91c32809ba.js"></script>
+    <script src="static/require.js" data-main="js/main-d83fbea2a3.js"></script>
   </head>
   <body>
     <!-- 头部开始 -->
@@ -26,8 +26,9 @@
           <span>资产管理</span>
         </div>
         <div class="user-admin">
-          <span>你好：高迪@文超！</span>
-          <a href="">退出</a>
+          <span>你好：<b></b>！</span>
+          <a href="putting.html">设置</a>
+          <a href="javascript:void(0);" id="loginOut">退出</a>
         </div>
       </div>
     </div>
@@ -60,9 +61,9 @@
               </div>
               <ul>
                 <li><a href="order-admin.html">全部</a></li>
-                <li><a href="pending-delivery.html">待发货</a></li>
-                <li><a href="change-info.html">已发货</a></li>
-                <li><a href="order-over.html">已完成</a></li>
+                <li><a href="pending-delivery.html?status='= 2'">待发货</a></li>
+                <li><a href="change-info.html?status='= 3'">已发货</a></li>
+                <li><a href="order-over.html?status='= 4'">已完成</a></li>
               </ul>
             </div>
           </div>
@@ -99,41 +100,48 @@
           <!-- 关注量 -->
           <div class="hm-shop-follow">
             <div class="img-info clear">
-              <div class="picture">
-                <img src="img/hm-pic/hm-02-534b4ff2a0.jpg" width="116" height="116" alt="">
+              <div class="picture" id="shop-picture">
+                <img src="" width="116" height="116" alt="">
               </div>
               <h3>
-                <p class="info-text">中性优衣品</p>
-                <p>港味复古民族风中性bf风</p>
+                <p class="info-text" id="shop-name"></p>
+                <p id="shop-desc"></p>
               </h3>
             </div>
             <div class="follow">
-              <span>关注量：50</span>
+              <span>关注量：<b id="followAttention"></b></span>
             </div>
           </div>
           <!-- 资产信息 -->
           <div class="asset-expressive">
-            <div class="asset-balance">
+            <div class="asset-balance" id="balanceOut">
               <h4>可转余额</h4>
-              <p>8754.23</p>
+              <p></p>
               <a href="cash-admin.html">提现</a>
             </div>
             <div class="asset-line"></div>
-            <div class="asset-sum">
+            <div class="asset-sum" id="equityAssets">
               <h4>权益资产</h4>
-              <p>3975765</p>
+              <p></p>
+            </div>
+            <div class="asset-line"></div>
+            <div class="asset-sum" id="currentAssets">
+              <h4>流动资产</h4>
+              <p></p>
             </div>
           </div>
           <!-- 余额 权益 -->
           <ul class="balance-opt">
-            <li><a class="active" href="javascript:void(0);">余额转入</a></li>
-            <li><a href="javascript:void(0);">余额转出</a></li>
-            <li><a href="javascript:void(0);">权益增加</a></li>
-            <li><a href="javascript:void(0);">权益减少</a></li>
+            <li><a class="active" href="javascript:void(0);" name="1">余额转入</a></li>
+            <li><a href="javascript:void(0);" name="2">余额转出</a></li>
+            <li><a href="javascript:void(0);" name="3">权益增加</a></li>
+            <li><a href="javascript:void(0);" name="4">权益减少</a></li>
+            <li><a href="javascript:void(0);" name="5">流动增加</a></li>
+            <li><a href="javascript:void(0);" name="6">流动减少</a></li>
             <li>
               <span>时间</span>
-              <input type="text" onClick="new Calendar().show(this);"> —— <input type="text" onClick="new Calendar().show(this);">
-              <button>查询</button>
+              <input type="text" onClick="new Calendar().show(this);" id="startDate" readonly="readonly"> —— <input type="text" onClick="new Calendar().show(this);" id="endDate" readonly="readonly">
+              <button id="assetQueryBut">查询</button>
             </li>
           </ul>
           <!-- 余额 权益 列表 -->
@@ -147,28 +155,7 @@
                     <th>信息</th>
                   </tr>
                 </thead>
-                <tbody>
-                  <tr>
-                    <td>2017.11.21</td>
-                    <td>100</td>
-                    <td>销售商品</td>
-                  </tr>
-                  <tr>
-                    <td>2017.11.21</td>
-                    <td>100</td>
-                    <td>销售商品</td>
-                  </tr>
-                  <tr>
-                    <td>2017.11.21</td>
-                    <td>100</td>
-                    <td>销售商品</td>
-                  </tr>
-                  <tr>
-                    <td>2017.11.21</td>
-                    <td>100</td>
-                    <td>销售商品</td>
-                  </tr>
-                </tbody>
+                <tbody id="balanceInto"></tbody>
               </table>
               <div class="page clear">
                 <div class="page-group">
@@ -185,28 +172,7 @@
                     <th>信息</th>
                   </tr>
                 </thead>
-                <tbody>
-                  <tr>
-                    <td>2017.11.21</td>
-                    <td>100</td>
-                    <td>提现到银行卡</td>
-                  </tr>
-                  <tr>
-                    <td>2017.11.21</td>
-                    <td>100</td>
-                    <td>提现到银行卡</td>
-                  </tr>
-                  <tr>
-                    <td>2017.11.21</td>
-                    <td>100</td>
-                    <td>提现到银行卡</td>
-                  </tr>
-                  <tr>
-                    <td>2017.11.21</td>
-                    <td>100</td>
-                    <td>提现到银行卡</td>
-                  </tr>
-                </tbody>
+                <tbody id="balanceTurnOut"></tbody>
               </table>
               <div class="page clear">
                 <div class="page-group">
@@ -223,28 +189,7 @@
                     <th>信息</th>
                   </tr>
                 </thead>
-                <tbody>
-                  <tr>
-                    <td>2017.11.21</td>
-                    <td>100</td>
-                    <td>违约扣除</td>
-                  </tr>
-                  <tr>
-                    <td>2017.11.21</td>
-                    <td>100</td>
-                    <td>违约扣除</td>
-                  </tr>
-                  <tr>
-                    <td>2017.11.21</td>
-                    <td>100</td>
-                    <td>违约扣除</td>
-                  </tr>
-                  <tr>
-                    <td>2017.11.21</td>
-                    <td>100</td>
-                    <td>违约扣除</td>
-                  </tr>
-                </tbody>
+                <tbody id="balanceIntoList"></tbody>
               </table>
               <div class="page clear">
                 <div class="page-group">
@@ -261,28 +206,41 @@
                     <th>信息</th>
                   </tr>
                 </thead>
-                <tbody>
+                <tbody id="balanceOutList"></tbody>
+              </table>
+              <div class="page clear">
+                <div class="page-group">
+                  <div class="page-list"></div>
+                </div>
+              </div>
+            </div>
+            <div class="balance-table balance-close">
+              <table>
+                <thead>
                   <tr>
-                    <td>2017.11.21</td>
-                    <td>100</td>
-                    <td>销售商品</td>
+                    <th>时间</th>
+                    <th>数量（个）</th>
+                    <th>信息</th>
                   </tr>
+                </thead>
+                <tbody id="flowIntoList"></tbody>
+              </table>
+              <div class="page clear">
+                <div class="page-group">
+                  <div class="page-list"></div>
+                </div>
+              </div>
+            </div>
+            <div class="balance-table balance-close">
+              <table>
+                <thead>
                   <tr>
-                    <td>2017.11.21</td>
-                    <td>100</td>
-                    <td>销售商品</td>
+                    <th>时间</th>
+                    <th>数量（个）</th>
+                    <th>信息</th>
                   </tr>
-                  <tr>
-                    <td>2017.11.21</td>
-                    <td>100</td>
-                    <td>销售商品</td>
-                  </tr>
-                  <tr>
-                    <td>2017.11.21</td>
-                    <td>100</td>
-                    <td>销售商品</td>
-                  </tr>
-                </tbody>
+                </thead>
+                <tbody id="flowOutList"></tbody>
               </table>
               <div class="page clear">
                 <div class="page-group">

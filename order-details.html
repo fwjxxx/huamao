@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>华猫</title>
     <link rel="stylesheet" href="css/reset-0e27f0c88f.css">
-    <link rel="stylesheet" href="css/index-26c8a1cd0f.css">
-    <script src="static/require.js" data-main="js/main-91c32809ba.js"></script>
+    <link rel="stylesheet" href="css/index-eb040e8d78.css">
+    <script src="static/require.js" data-main="js/main-d83fbea2a3.js"></script>
   </head>
   <body>
     <!-- 头部开始 -->
@@ -25,8 +25,9 @@
           <span>订单详情</span>
         </div>
         <div class="user-admin">
-          <span>你好：高迪@文超！</span>
-          <a href="">退出</a>
+          <span>你好：<b></b>！</span>
+          <a href="putting.html">设置</a>
+          <a href="javascript:void(0);" id="loginOut">退出</a>
         </div>
       </div>
     </div>
@@ -59,9 +60,9 @@
               </div>
               <ul>
                 <li><a href="order-admin.html">全部</a></li>
-                <li><a href="pending-delivery.html">待发货</a></li>
-                <li><a href="change-info.html">已发货</a></li>
-                <li><a href="order-over.html">已完成</a></li>
+                <li><a href="pending-delivery.html?status='= 2'">待发货</a></li>
+                <li><a href="change-info.html?status='= 3'">已发货</a></li>
+                <li><a href="order-over.html?status='= 4'">已完成</a></li>
               </ul>
             </div>
           </div>
@@ -96,42 +97,23 @@
         <!-- 基本信息 -->
         <div class="hm-basic-info">
           <div class="hm-order-details">
+            <!-- 基本信息 -->
+            <div class="essential-info">
+              <h3>基本信息</h3>
+              <div class="info-content"></div>
+            </div>
             <!-- 订单信息 -->
             <div class="essential-buyer-info clear">
-              <!-- 基本信息 -->
-              <div class="essential-info">
-                <h3>基本信息</h3>
-                <div class="info-content">
-                  <ul>
-                    <li><span>订单编号：201721512412</span></li>
-                    <li><span>订单状态：已发货</span></li>
-                    <li><span>购买用户：低温超</span></li>
-                    <li><span>支付时间：2017-12-03</span></li>
-                    <li><span>支付方式：支付宝</span></li>
-                  </ul>
-                  <ul>
-                    <li><span>发货时间：2017-12-05</span></li>
-                    <li><span>快递方式：圆通</span></li>
-                    <li><span>快递单号：10000215142514</span></li>
-                    <li><span>完成时间：2017-12-09</span></li>
-                  </ul>
-                </div>
-              </div>
               <!-- 收货人信息 -->
               <div class="buyer-info">
                 <h3>收货人信息</h3>
-                <ul>
-                  <li><span>姓名：低温超</span></li>
-                  <li><span>电话：15212236548</span></li>
-                  <li><span>地址：北京市 朝阳区芍药区吉利家园</span></li>
-                  <li><span>邮编：100000</span></li>
-                </ul>
+                <ul id="orderDetailsConsignee"></ul>
               </div>
-            </div>
-            <!-- 买家留言 -->
-            <div class="buyers-message">
-              <h3>买家留言</h3>
-              <p>我要我要我要红色......</p>
+              <!-- 买家留言 -->
+              <div class="buyers-message">
+                <h3>买家留言</h3>
+                <p></p>
+              </div>
             </div>
             <!-- 商品信息 -->
             <div class="commodity-info">
@@ -148,52 +130,14 @@
                       <th>总价</th>
                     </tr>
                   </thead>
-                  <tbody>
-                    <tr>
-                      <td>钱夫人 雪梨家同款毛大衣白色公主梦幻</td>
-                      <td>HM10002</td>
-                      <td>红色 XL</td>
-                      <td>600</td>
-                      <td>2</td>
-                      <td>1200</td>
-                    </tr>
-                    <tr>
-                      <td>钱夫人 雪梨家同款毛大衣白色公主梦幻</td>
-                      <td>HM10002</td>
-                      <td>红色 XL</td>
-                      <td>600</td>
-                      <td>2</td>
-                      <td>1200</td>
-                    </tr>
-                    <tr>
-                      <td>钱夫人 雪梨家同款毛大衣白色公主梦幻</td>
-                      <td>HM10002</td>
-                      <td>红色 XL</td>
-                      <td>600</td>
-                      <td>2</td>
-                      <td>1200</td>
-                    </tr>
-                    <tr>
-                      <td>钱夫人 雪梨家同款毛大衣白色公主梦幻</td>
-                      <td>HM10002</td>
-                      <td>红色 XL</td>
-                      <td>600</td>
-                      <td>2</td>
-                      <td>1200</td>
-                    </tr>
-                  </tbody>
+                  <tbody id="orderShopInfo"></tbody>
                 </table>
               </div>
               <div class="goods-sum">
-                <p>
-                  <span>商品共计：4</span>
-                  <span>商品总价：2400</span>
-                </p>
+                <p id="orderGoodsSum"></p>
               </div>
               <div class="goods-sum">
-                <p>
-                  <span>权益类资产：+100个</span>
-                </p>
+                <p id="orderAssetsSum"></p>
               </div>
             </div>
           </div>

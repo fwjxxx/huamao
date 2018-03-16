@@ -149,7 +149,7 @@
                         imageSection.remove();
                         return false;
                     }else if(json.error > 0){
-                        alert('123'+json.msg);
+                        alert(json.msg);
                         imageSection.remove();
                         return false;
                     }

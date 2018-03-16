@@ -139,6 +139,7 @@ a {
             line-height: 20px;
 
             span {
+                display: none;
                 font-family: @yahei;
                 font-size: 14px;
                 text-align: center;
@@ -210,7 +211,7 @@ a {
 
         .login-group-but {
             text-align: center;
-            margin: 60px 0;
+            padding: 60px 0;
 
             button {
                 width: 200px;
@@ -278,6 +279,10 @@ a {
         text-align: left;
         color: @green;
 
+        b {
+            color: @font-main; 
+        }
+
     }
 }
 .user-admin {
@@ -291,6 +296,7 @@ a {
         color: @font-main;
     }
     a {
+        margin-left: 20px;
         font-size: 20px;
         text-align: left;
         color: @font-main;
@@ -422,7 +428,6 @@ a {
 
 /*========================================= 列表样式 =========================================*/
 
-
 /*======================== 基本信息样式 ========================*/
 .hm-basic-info {
     padding: 30px 0 0 80px;
@@ -441,6 +446,9 @@ a {
         .picture {
             float: left;
             margin: 35px 30px 0 20px;
+            width: 116px;
+            height: 116px;
+            border: 1px solid @gray;
         }
         h3 {
             float: left;
@@ -468,6 +476,9 @@ a {
         }
     }
 }
+.shop-info-color {
+    color: #666 !important;
+}
 .hm-shop-info {
     width: 1120px;
     height: 100%;
@@ -482,7 +493,7 @@ a {
         box-shadow: 0px 3px 16px 0 rgba(86, 86, 86, 0.38);
 
         .shop-info-form {
-            margin: 25px 88px 0 86px;
+            margin: 25px 75px 0 70px;
             label {
                 span {
                     font-size: 18px;
@@ -495,8 +506,13 @@ a {
                     padding: 0 10px;
                     border-radius: 5px;
                     outline: 0;
+                    color: #ddd;
                     background-color: @white;
                     border: solid 1px @gray;
+                }
+                b {
+                    font-size: 14px;
+                    color: @red;
                 }
             }
         }
@@ -518,15 +534,21 @@ a {
         }
         .shop-img {
             position: relative;
-            width: 128px;
+            width: 140px;
             height: 128px;
             margin-top: 30px;
             display: inline-block;
             text-align: center;
 
-            img {
+            .shop-img-box {
                 width: 128px;
                 height: 128px;
+                border: 1px solid @gray;
+
+                img {
+                    width: 128px;
+                    height: 128px;
+                }
             }
             .upload-input {
                 width: 100%;
@@ -537,6 +559,12 @@ a {
                 left: 0px;
                 z-index: 100;
                 cursor: pointer
+            }
+            p {
+                margin-top: 20px;
+                text-align: center;
+                font-size: 14px;
+                color: @red;
             }
         }
     }
@@ -549,6 +577,7 @@ a {
     button {
         width: 220px;
         height: 80px;
+        margin-right: 20px;
         line-height: 80px;
         border-radius: 5px;
         background-color: @green;
@@ -558,6 +587,11 @@ a {
         outline: 0;
         border: 0;
         cursor: pointer;
+    }
+
+    .hold-info-but {
+        background-color: @gray;
+        color: @font-main;
     }
 }
 
@@ -626,7 +660,7 @@ a {
         box-shadow: 0px 3px 16px 0 rgba(86, 86, 86, 0.38);
 
         li {
-            margin: 30px 0 0 80px;
+            margin: 30px 0 0 25px;
             span {
                 font-size: 18px;
                 text-align: left;
@@ -1136,85 +1170,27 @@ a {
     margin-bottom: 40px;
     
     .shop-spec {
-        width: 580px;
+        width: 530px;
         height: 320px;
+        padding: 0 10px 0 40px;
         float: left;
         border-radius: 5px;
         background-color: @white;
         box-shadow: 0px 3px 16px 0 rgba(86, 86, 86, 0.38);
 
-        .shop-spec-left {
-             float: left;
-             margin-left: 40px;
-             text-align: center;
 
-            h3 {
-                font-size: 18px;
-                color: @font-main;
-                margin: 70px 0 10px;
-            }
-            button {
-                width: 60px;
-                height: 30px;
-                line-height: 30px;
-                border-radius: 5px;
-                background-color: @green;
-                outline: 0;
-                border: 0;
-                cursor: pointer;
-                font-size: 16px;
-                color: @white;
 
-            }
+        h3 {
+            margin: 30px 0;
+            font-size: 16px;
+            color: @font-main;
         }
-        .shop-spec-right {
-            float: right;
-            padding: 20px 0;
 
-            table {
-                thead {
-                    tr {
-                        th {
-                            padding: 10px 0;
-                            font-size: 16px;
-                            color: @font-main;
-                        }
-                    }
-                }
-                tbody {
-                    tr {
-                        td {
-                            padding: 10px;
-                            input {
-                                width: 80px;
-                                height: 44px;
-                                padding: 0 10px;
-                                border-radius: 5px;
-                                background-color: @white;
-                                border: solid 1px @gray;
-                                outline: 0;
-                                font-size: 16px;
-                                color: @font-main;
-                                text-align: center;
-                            }
-                            button {
-                                width: 65px;
-                                height: 30px;
-                                line-height: 30px;
-                                border-radius: 5px;
-                                background-color: @green;
-                                outline: 0;
-                                border: 0;
-                                cursor: pointer;
-                                font-size: 16px;
-                                color: @white;
-                                text-align: center;
-                            }
-                        }
-                    }
-                }
-            }
-
+        textarea {
+            width: 100%;
+            height: 70%;
+            outline: 0;
+            border: 0;
         }
     }
     .shop-img-list {
@@ -1244,21 +1220,85 @@ a {
 }
 .shop-admin-details {
     width: 1120px;
-    height: 358px;
+    height: 100%;
+    padding-bottom: 30px;
     margin-bottom: 40px;
     border-radius: 5px;
     background-color: @white;
     box-shadow: 0px 3px 16px 0 rgba(86, 86, 86, 0.38);
 
-    h3 {
-        padding: 30px 0 30px 40px;
-        font-size: 18px;
-        color: @font-main;
+    .shop-spec-left {
+         float: left;
+         margin-left: 40px;
+         text-align: center;
+
+        h3 {
+            font-size: 18px;
+            color: @font-main;
+            margin: 30px 0 20px;
+        }
+        button {
+            width: 60px;
+            height: 30px;
+            line-height: 30px;
+            border-radius: 5px;
+            background-color: @green;
+            outline: 0;
+            border: 0;
+            cursor: pointer;
+            font-size: 16px;
+            color: @white;
+
+        }
     }
-    p {
-        font-size: 14px;
-        color: @font-77;
-        margin: 0 40px;
+    .shop-spec-right {
+        float: left;
+        padding: 20px 0 0 50px;
+
+        table {
+            thead {
+                tr {
+                    th {
+                        padding: 10px 0;
+                        font-size: 16px;
+                        color: @font-main;
+                    }
+                }
+            }
+            tbody {
+                tr {
+                    td {
+                        padding: 10px;
+                        input {
+                            width: 80px;
+                            height: 44px;
+                            padding: 0 10px;
+                            border-radius: 5px;
+                            background-color: @white;
+                            border: solid 1px @gray;
+                            outline: 0;
+                            font-size: 16px;
+                            color: @font-main;
+                            text-align: center;
+                        }
+                        button {
+                            width: 65px;
+                            height: 30px;
+                            line-height: 30px;
+                            border-radius: 5px;
+                            background-color: @green;
+                            outline: 0;
+                            border: 0;
+                            cursor: pointer;
+                            font-size: 16px;
+                            color: @white;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+
     }
 }
 .shop-admin-but {
@@ -1487,7 +1527,7 @@ a {
     }
     .withdrawals-write {
         width: 100%;
-        height: 378px;
+        height: 420px;
         margin-top: 30px;
         border-radius: 5px;
         background-color: @white;
@@ -1495,9 +1535,16 @@ a {
         text-align: center;
 
         li {
-            padding-top: 30px;
 
             label {
+                display: inline-block;
+                margin-top: 20px;
+                p {
+                    height: 30px;
+                    line-height: 30px;
+                    font-size: 16px;
+                    color: @red;
+                }
                 span {
                     font-size: 18px;
                     color: @font-33;
@@ -1515,6 +1562,7 @@ a {
             button {
                 width: 200px;
                 height: 70px;
+                margin-top: 30px;
                 line-height: 70px;
                 border-radius: 5px;
                 background-color: @green;
@@ -1685,80 +1733,127 @@ a {
         }
     }
     .order-content {
-        padding-bottom: 20px;
-        border-bottom: 1px solid @font-da;
 
-        .order-img {
-            float: left;
-            margin: 20px 20px 0 30px;
+        .orderlist {
+            padding-bottom: 20px;
+            border-bottom: 1px solid @font-da;
+            &:last-child {
+                border-bottom: 0px;
+            }
 
-            img {
+            .order-img {
+                float: left;
                 width: 154px;
                 height: 154px;
+                border: 1px solid @gray;
+                margin: 20px 20px 0 30px;
+
+                img {
+                    width: 154px;
+                    height: 154px;
+                }
+            }
+            .order-shop-info {
+                float: left;
+                width: 190px;
+
+                h2 {
+                    padding-top: 20px;
+                    font-size: 14px;
+                    color: @font-33;
+                }
+
+                ul {
+                    margin-bottom: 10px;
+                    
+                    li {
+                        margin-top: 20px;
+
+                        p {
+                            font-size: 12px;
+                            color: @font-main;
+                        }
+                    }
+                }
+            }
+            .order-message {
+                float: left;
+                width: 160px;
+                margin: 40px 0 0 90px;
+
+                h4 {
+                    margin-top: 20px;
+                    font-size: 14px;
+                    color: @font-33;
+                }
+
+                p {
+                    margin-top: 20px;
+                    font-size: 14px;
+                    color: @font-33;
+                }
+
+            }
+            .order-buyers-info {
+                float: left;
+                width: 350px;
+                margin: 40px 0 0 100px;
+
+                h4 {
+                    margin-top: 20px;
+                    font-size: 14px;
+                    color: @font-33;
+                }
+
+                p {
+                    margin-top: 20px;
+                    font-size: 14px;
+                    color: @font-33;
+                }
             }
         }
-        .order-shop-info {
-            float: left;
-            width: 190px;
 
-            h2 {
-                padding-top: 20px;
-                font-size: 14px;
-                color: @font-33;
+        .orderconsignee {
+            padding: 15px 0 15px 30px;
+            background: @gray-f7;
+
+            .order-total {
+                margin-bottom: 10px;
+                span {
+                    font-size: 14px;
+                    color: @font-33;
+                }
+            }
+
+            .order-pay-time {
+                margin-bottom: 10px;
+                p {
+                    font-size: 14px;
+                    color: @font-33;
+
+                    span {
+                        margin-right: 10px;
+                    }
+                }
+            }
+
+            .order-buyers-message {
+                p {
+                    margin-bottom: 10px;
+                    font-size: 14px;
+                    color: @font-33;
+                }
             }
 
             ul {
                 margin-bottom: 10px;
-                
                 li {
-                    margin-top: 20px;
-
-                    p {
-                        font-size: 12px;
-                        color: @font-main;
-                    }
+                    display: inline-block;
+                    margin-right: 20px;
+                    font-size: 14px;
+                    color: @font-33;
                 }
             }
-        }
-        .order-message {
-            float: left;
-            width: 160px;
-            margin: 40px 0 0 90px;
-
-            ul {
-                li {
-                    p {
-                        margin-top: 20px;
-                        line-height: 20px;
-                        font-size: 14px;
-                        color: @font-33;
-                        span {
-                            
-                        }
-                    }
-                }
-            }
-
-        }
-        .order-buyers-info {
-            float: left;
-            width: 350px;
-            margin: 40px 0 0 100px;
-
-            ul {
-                li {
-                    p {
-                        margin-top: 20px;
-                        font-size: 14px;
-                        color: @font-33;
-
-                        span {
-                            
-                        }
-                    }
-                }
-            }
-
         }
     }
 }
@@ -1782,9 +1877,9 @@ a {
     position: absolute;
     top: 50%;
     left: 50%;
-    margin: -300px 0 0 -275px;
+    // margin: -300px 0 0 -275px;
     width: 600px;
-    height: 550px;
+    height: 330px;
     border-radius: 5px;
     background-color: @white;
 
@@ -1940,44 +2035,43 @@ a {
 .hm-order-details {
     width: 1120px;
 
-    .essential-buyer-info {
+    .essential-info {
+        float: left;
         width: 100%;
+        height: 250px;
         margin-bottom: 30px;
+        border-radius: 5px;
+        background-color: @white;
+        box-shadow: 0px 3px 16px 0 rgba(86, 86, 86, 0.38);
 
-        .essential-info {
-            float: left;
-            width: 520px;
-            height: 250px;
-            border-radius: 5px;
-            background-color: @white;
-            box-shadow: 0px 3px 16px 0 rgba(86, 86, 86, 0.38);
+        h3 {
+            padding: 30px 0 0 30px;
+            font-size: 16px;
+            color: @font-33;
+        }
 
-            h3 {
-                padding: 30px 0 0 30px;
-                font-size: 16px;
-                color: @font-33;
-            }
+        .info-content {
+            display: flex;
+            ul {
+                flex: 1;
+                padding: 0 30px 30px 30px;
 
-            .info-content {
-                display: flex;
-                ul {
-                    flex: 1;
-                    padding: 0 30px 30px 30px;
+                li {
+                    margin-top: 20px;
 
-                    li {
-                        margin-top: 20px;
-
-                        span {
-                            font-size: 14px;
-                            color: @font-main;
-                        }
+                    span {
+                        font-size: 14px;
+                        color: @font-main;
                     }
                 }
             }
         }
+    }
+    .essential-buyer-info {
+        width: 100%;
         .buyer-info {
-            float: right;
-            width: 540px;
+            float: left;
+            width: 460px;
             height: 250px;
             border-radius: 5px;
             background-color: @white;
@@ -2002,24 +2096,25 @@ a {
                 }
             }
         }
-    }
-    .buyers-message {
-        width: 100%;
-        height: 250px;
-        margin-bottom: 30px;
-        border-radius: 5px;
-        background-color: @white;
-        box-shadow: 0px 3px 16px 0 rgba(86, 86, 86, 0.38);
+        .buyers-message {
+            float: right;
+            width: 620px;
+            height: 250px;
+            margin-bottom: 30px;
+            border-radius: 5px;
+            background-color: @white;
+            box-shadow: 0px 3px 16px 0 rgba(86, 86, 86, 0.38);
 
-        h3 {
-            padding: 30px 0 20px 30px;
-            font-size: 16px;
-            color: @font-33;
-        }
-        p {
-            padding: 0 30px;
-            font-size: 14px;
-            color: @font-main;
+            h3 {
+                padding: 30px 0 20px 30px;
+                font-size: 16px;
+                color: @font-33;
+            }
+            p {
+                padding: 0 30px;
+                font-size: 14px;
+                color: @font-main;
+            }
         }
     }
     .commodity-info {
@@ -2073,6 +2168,7 @@ a {
             margin: 20px 0 0 30px;
             p {
                 span {
+                    margin-right: 20px;
                     font-size: 14px;
                     color: @font-33;
                 }
@@ -2096,7 +2192,7 @@ a {
 
     .presell-box {
         width: 1120px;
-        height: 264px;
+        height: 100%;
         margin-top: 20px;
         border-radius: 5px;
         background-color: @white;
@@ -2123,9 +2219,10 @@ a {
             }
             tbody {
                 tr {
+                    border-bottom: 1px solid @gray;
                     td {
                         vertical-align: top;
-                        padding-top: 20px;
+                        padding: 20px 0;
 
                         img {
                             margin-left: 30px;
@@ -2192,12 +2289,62 @@ a {
             background-color: @white;
             box-shadow: 0px 3px 16px 0 rgba(86, 86, 86, 0.38);
 
+            .presell-details-text {
+                margin: 30px 0 0 80px;
+                li {
+                    margin: 10px 0;
+                    padding: 10px 0;
+                    font-size: 16px;
+                    color: @font-main;
+
+                    span {
+                        margin-left: 20px;
+                    }
+                }
+            }
+
+            .presell-details-num {
+                margin: 30px 0 0 80px;
+                li {
+                    display: inline-block;
+                    margin-right: 20px;
+                    font-size: 16px;
+                    color: @font-main;
+                    span {
+                        margin-left: 20px;
+                    }
+                }
+            }
+
+            .presell-detail-profits {
+                margin: 30px 0 0 80px;
+                font-size: 16px;
+                color: @font-main;
+                span {
+                }
+                p {
+                    margin: 20px 0 20px 80px;
+                }
+                strong {
+                    margin: 20px 0;
+                }
+            }
+
+            .presell-detail-date {
+                margin: 30px 0 0 80px;
+                li {
+                    margin-bottom: 20px;
+                    font-size: 16px;
+                    color: @font-main;
+                }
+            }
+
             .presell-text {
                 padding-top: 10px;
 
                 label {
                     display: block;
-                    margin: 20px 0 0 80px;
+                    margin: 25px 0 0 80px;
 
                     span {
                         font-size: 16px;
@@ -2215,7 +2362,7 @@ a {
             }
 
             .presell-text-num {
-                margin: 20px 0 0 80px;
+                margin: 30px 0 0 80px;
                 label {
                     display: inline-block;
                     vertical-align: top;
@@ -2281,7 +2428,7 @@ a {
             }
 
             .presell-profits {
-                margin: 20px 0 0 80px;
+                margin: 30px 0 30px 80px;
 
                 label {
                     span {
@@ -2290,18 +2437,24 @@ a {
                         color: @font-main;
                     }
                     p {
-                        margin: 10px 0 10px 80px;
+                        margin: 20px 0 20px 80px;
                         font-size: 16px;
                         text-align: left;
                         color: @font-main;
                         input {
-                            width: 62px;
+                            width: 40px;
                             height: 20px;
                             margin: 0 10px;
                             border-radius: 5px;
                             border: solid 1px @gray;
                             outline: 0;
                             text-align: center;
+                        }
+
+                        i {
+                            font-size: 12px;
+                            color: @red;
+                            margin-left: 20px;
                         }
                     }
                 }
@@ -2337,7 +2490,7 @@ a {
             }
 
             .presell-feedback {
-                padding: 10px 0 0 80px;
+                padding: 20px 0 0 80px;
 
                 label {
                     font-size: 16px;
@@ -2405,10 +2558,10 @@ a {
         }
     }
     .presell-introduce {
-        width: 1120px;
+        width: 1080px;
         height: 320px;
-        margin-top: 30px;
-        padding: 30px;
+        margin: 30px 0;
+        padding: 20px;
         border-radius: 5px;
         background-color: @white;
         box-shadow: 0px 3px 16px 0 rgba(86, 86, 86, 0.38);
@@ -2441,6 +2594,229 @@ a {
             outline: 0;
             border: 0;
             cursor: pointer;
+        }
+    }
+}
+
+.hm-presell-purchaser {
+    width: 1200px;
+    margin-top: 30px;
+    table {
+        width: 100%;
+        text-align: center;
+
+        thead {
+            tr {
+                th {
+                    height: 60px;
+                    background: @gray-f7;
+                    line-height: 60px;
+                    font-size: 16px;
+                    color: @font-main;
+
+
+                    .purchaser-balance-list {
+                        display: inline-block;
+                        position: relative;
+                        vertical-align: top;
+                        margin-top: 13px;
+                        width: 88px;
+                        height: 32px;
+                        line-height: 32px;
+                        margin-left: 20px;
+                        border-radius: 5px;
+                        background: @white;
+                        border: solid 1px @gray;
+                        cursor: pointer;
+
+                        span {
+                            display: block;
+                            text-align: left;
+                            text-indent: 10px;
+                            font-size: 15px;
+                            color: @font-main;
+                            // margin-left: 30px;
+                        }
+                        i {
+                            display: inline-block;
+                            position: absolute;
+                            top: 12px;
+                            right: 10px;
+                            background: url(../img/icon-small-03-aea7a462e9.png);
+                            width: 14px;
+                            height: 11px;
+                        }
+                        ul {
+                            display:  none;
+                            width: 86px;
+                            position: absolute;
+                            top: 32px;
+                            left: 0;
+                            z-index: 100;
+                            background: @white;
+                            border: solid 1px @gray;
+                            li {
+                                height: 30px;
+                                // margin: 5px 0;
+                                line-height: 30px;
+                                text-align: center;
+                                font-size: 16px;
+                                color: @font-main;
+
+                                &:hover {
+                                    background: @gray;
+                                }
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        tbody {
+            tr {
+                td {
+                    height: 80px;
+                    line-height: 80px;
+                    font-size: 16px;
+                    color: @font-main;
+
+                    span {
+                        font-size: 14px;
+                        color: @font-main;
+                    }
+
+                    button {
+                        padding: 8px 12px;
+                        border-radius: 10px;
+                        background: @green;
+                        font-size: 14px;
+                        color: @white;
+                        outline: 0;
+                        border: 0;
+                        cursor: pointer;
+                    }
+                }
+                &:nth-of-type(even) {
+                    background-color: #f1f1f1;
+                }
+            }
+        }
+    }
+}
+
+
+.presell-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5)
+}
+.presell-pop-box {
+    width: 540px;
+    height: 370px;
+    padding: 0 30px;
+    border-radius: 5px;
+    background-color: @white;
+
+    h3 {
+        margin: 30px 0;
+        text-align: center;
+        font-size: 18px;
+        color: @font-main;
+    }
+
+    ul {
+        li {
+            padding: 10px 0;
+            span {
+                font-size: 14px;
+                color: @font-main;
+            }
+        }
+    }
+
+    .presell-mask-sum {
+        padding-top: 10px;
+        border-top: 1px solid @gray;
+        font-size: 14px;
+        color: @font-main;
+        p {
+            margin-top: 10px;
+        }
+    }
+
+    .presell-pop-but {
+        margin-top: 30px;
+        text-align: center;
+        button {
+            width: 99px;
+            height: 46px;
+            line-height: 46px;
+            border-radius: 5px;
+            background-color: @green;
+            outline: 0;
+            border: 0;
+            cursor: pointer;
+            font-size: 18px;
+            color: @white;
+
+            &:nth-child(1) {
+                margin-right: 40px;
+            }
+        }
+    }
+}
+
+
+/*================================ 设置统一样式 ================================*/
+.hm-putting-password {
+    width: 700px;
+    margin-left: 200px;
+    .putting-password {
+        li {
+            label {
+                span {
+                    font-size: 20px;
+                    color: @font-main;
+                    margin-right: 10px;
+                }
+                input {
+                    width: 350px;
+                    height: 50px;
+                    padding-left: 20px;
+                    margin: 20px 0;
+                    border-radius: 5px;
+                    border: 1px solid @gray;
+                    outline: 0;
+                }
+                b {
+                    margin-left: 10px;
+                    font-size: 18px;
+                    color: @red;
+                }
+                .password {
+                    margin-left: 22px;
+                }
+            }
+        }
+    }
+    .password-but {
+        width: 100%;
+        button {
+            width: 180px;
+            height: 60px;
+            margin-left: 200px;
+            border-radius: 5px;
+            background-color: @green;
+            border: 0;
+            outline: 0;
+            cursor: pointer;
+            font-size: 18px;
+            color: @white;
         }
     }
 }

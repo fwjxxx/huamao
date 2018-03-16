@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>华猫</title>
     <link rel="stylesheet" href="css/reset-0e27f0c88f.css">
-    <link rel="stylesheet" href="css/index-26c8a1cd0f.css">
-    <script src="static/require.js" data-main="js/main-91c32809ba.js"></script>
+    <link rel="stylesheet" href="css/index-eb040e8d78.css">
+    <script src="static/require.js" data-main="js/main-d83fbea2a3.js"></script>
   </head>
   <body>
     <!-- 头部开始 -->
@@ -22,11 +22,12 @@
       </div>
       <div class="hm-info-top">
         <div class="hm-title">
-          <span>提现管理</span>
+          <span><b>设置 - </b>修改密码</span>
         </div>
         <div class="user-admin">
-          <span>你好：高迪@文超！</span>
-          <a href="">退出</a>
+          <span>你好：<b></b>！</span>
+          <a href="putting.html">设置</a>
+          <a href="javascript:void(0);" id="loginOut">退出</a>
         </div>
       </div>
     </div>
@@ -38,14 +39,14 @@
         <!-- 导航列表 -->
         <div class="hm-nav">
           <div class="nav-list">
-            <div class="nav-close nav-open">
+            <div class="nav-close">
               <div class="nav-top clear">
                   <span>店铺</span>
-                  <i class="icon-top"></i>
+                  <i class="icon-bottom"></i>
               </div>
               <ul>
                 <li><a href="profit-detailed.html">收益明细</a></li>
-                <li class="active"><a href="asset-admin.html">资产管理</a></li>
+                <li><a href="asset-admin.html">资产管理</a></li>
                 <li><a href="user-info.html">基本信息</a></li>
                 <li><a href="cooperation-express.html">合作快递</a></li>
               </ul>
@@ -58,10 +59,10 @@
                   <i class="icon-bottom"></i>
               </div>
               <ul>
-                <li class="active"><a href="order-admin.html">全部</a></li>
-                <li><a href="pending-delivery.html">待发货</a></li>
-                <li><a href="change-info.html">已发货</a></li>
-                <li><a href="order-over.html">已完成</a></li>
+                <li><a href="order-admin.html">全部</a></li>
+                <li><a href="pending-delivery.html?status='= 2'">待发货</a></li>
+                <li><a href="change-info.html?status='= 3'">已发货</a></li>
+                <li><a href="order-over.html?status='= 4'">已完成</a></li>
               </ul>
             </div>
           </div>
@@ -95,66 +96,35 @@
       <div class="hm-list-right">
         <!-- 基本信息 -->
         <div class="hm-basic-info">
-          <!-- 审核 提现 选择  -->
-          <div class="auditing-choice">
-            <a href="cash-admin.html">提现申请</a>
-            <a href="cash-audit-1.html">审核中</a>
-            <a href="cash-audit-2.html" class="active">已通过</a>
-            <a href="cash-audit-3.html">未通过</a>
-          </div>
-        </div>
-        <!-- 审核列表1  -->
-        <div class="audit-box-list">
-          <table>
-            <thead>
-              <tr>
-                <th>提交单号</th>
-                <th>提交时间</th>
-                <th>姓名</th>
-                <th>银行卡号</th>
-                <th>金额</th>
-                <th>手续费</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>4545457854545</td>
-                <td>2017-05-20</td>
-                <td>帝文潮</td>
-                <td>45547874145541212</td>
-                <td>500</td>
-                <td>10</td>
-              </tr>
-              <tr>
-                <td>4545457854545</td>
-                <td>2017-05-20</td>
-                <td>朝闻笛</td>
-                <td>45648785154848785</td>
-                <td>300</td>
-                <td>5</td>
-              </tr>
-              <tr>
-                <td>4545457854545</td>
-                <td>2017-05-20</td>
-                <td>帝文潮</td>
-                <td>45547874145541212</td>
-                <td>500</td>
-                <td>10</td>
-              </tr>
-              <tr>
-                <td>4545457854545</td>
-                <td>2017-05-20</td>
-                <td>朝闻笛</td>
-                <td>45648785154848785</td>
-                <td>300</td>
-                <td>5</td>
-              </tr>
-            </tbody>
-          </table>
-          <div class="page clear">
-            <div class="shop-list-del"></div>
-            <div class="page-group">
-              <div class="page-list"></div>
+          <!-- 更改密码 -->
+          <div class="hm-putting-password">
+            <!-- 更改密码信息 -->
+            <ul class="putting-password">
+              <li>
+                <label id="oldPassword">
+                  <span class="password">原密码</span>
+                  <input type="password" placeholder="请输入原密码">
+                  <b></b>
+                </label>
+              </li>
+              <li>
+                <label id="newPassword">
+                  <span class="password">新密码</span>
+                  <input type="password" placeholder="请输入新密码">
+                  <b></b>
+                </label>
+              </li>
+              <li>
+                <label id="confirmPassword">
+                  <span>确认密码</span>
+                  <input type="password" placeholder="请重新输入新密码">
+                  <b></b>
+                </label>
+              </li>
+            </ul>
+            <!-- 确认按钮 -->
+            <div class="password-but">
+              <button id="passwordUpdata">确认修改</button>
             </div>
           </div>
         </div>
