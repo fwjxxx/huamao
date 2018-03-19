@@ -1410,21 +1410,14 @@ require(['jquery','pagination','upload'], function($) {
     presellInfo.presellInit();
 
     $('#presell-profits-input').keyup(function() {
-        // $('#presell-num').hide();
         var tmptxt = $(this).val();
-        var reg = /^40$|^([1-3]\d)$|^\d?$/;
+        var reg = /^90$|^([1-3]\d)$|^\d?$/;
         if( !reg.test(tmptxt)){
             $(this).val('');
             $('#presell-num').text('请输入0-90的数字');
         } else{
             $('#presell-num').text('');
         }
-        // if(!reg.test(tmptxt)) {  
-        //     $(this).val('0');
-        //     $('#presell-num').text('请输入0-90的数字');
-        // } else {
-        //     $('#presell-num').text('');
-        // }
     })
 
     //弹出框样式，居中
@@ -1438,14 +1431,6 @@ require(['jquery','pagination','upload'], function($) {
         $('.order-pop-box').css( { position : 'absolute', 'top' : top + scrollTop, left : left + scrollLeft } ).show();
         $('.presell-pop-box').css( { position : 'absolute', 'top' : top + scrollTop, left : left + scrollLeft } ).show();
     }
-    $("#presell-profits-input").on("change",function(){
-        
-        var content=$(this).val();
-        console.log()
-        if(content.length!=1&&content!="10"){
-             $(this).val(content.substring(0,1));
-        }
-    });
 
     presellScroll();
     //订单列表 添加发货订单
@@ -1511,8 +1496,12 @@ require(['jquery','pagination','upload'], function($) {
     //预售品平台让利
     $('#presell-profits-input').keyup(function() {
         // $('#presell-profits-input').val('');
-        let a = parseInt($(this).val()) + 10;
-        $('.presell-profits b').text(a);
+        if ($(this).val() === '') {
+            $('.presell-profits b').text('10');
+        } else {
+            let a = parseInt($(this).val()) + 10;
+            $('.presell-profits b').text(a);
+        }
     });
     //审核中 预售中 待回馈 回馈中 已结束 未通过
     $('.auditing-choice a').each(function(i) {
